@@ -10,8 +10,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  *
  */
 @SpringBootApplication
-@EnableEurekaClient
-@EnableDiscoveryClient
+@EnableEurekaClient    //声明该模块是Eureka的客户端
+@EnableDiscoveryClient //对于注册到Eureka中的服务，可以通过该注解来获取服务信息（服务发现）
 @MapperScan(basePackages = "com.szh.springcloud.dao")
 public class PaymentMain8002 {
     public static void main(String[] args) {
